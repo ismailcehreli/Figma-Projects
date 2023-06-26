@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    color: #424242;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+}
+
+/* HEADER START */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 81px;
+    box-sizing: border-boxß;
+}
+
+.header_logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar_first_logo {
+    margin-right: 1.5rem;
+}
+
+.navbar_menu_links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar_menu_links li {
+    margin-right: 1.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar_menu_links li.active {
+    font-weight: 600;
+    color: #5A47AB;
+}
+
+/* RESPONSIVE MENU START */
+
+.menu_collapse {
+    display: none;
+}
+
+.navbar_mobile_logo {
+    display: none;
+}
+
+/* RESPONSIVE MENU END */
+
+/* HEADER END */
+
+/* SHOWCASE START */
+
+.showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.showcase_info {
+    flex: 6;
+    padding: 5rem 0;
+}
+
+.showcase_info h1,
+h3 {
+    font-size: 52px;
+    margin: 0;
+}
+
+.showcase_info h1 {
+    color: #d05270;
+}
+
+.showcase_info h3 {
+    font-weight: 500;
+}
+
+.showcase_info p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.showcase_img {
+    flex: 4;
+}
+
+.showcase_links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.showcase_links .showcase_link {
+    color: white;
+    font-size: 12px;
+    width: 30%;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase_links .showcase_link img {
+    margin-right: 2rem;
+}
+
+.showcase_links .showcase_link.showcase_twitter {
+    background-color: #47acdf;
+}
+
+.showcase_links .showcase_link.showcase_linkedin {
+    background-color: #1275B1;
+}
+
+.showcase_links .showcase_link.showcase_medium {
+    background-color: #000;
+}
+
+/* SHOWCASE END */
+
+/* CATEGORIES START */
+.blog_categories {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+.blog_categories .item {
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.blog_categories .item.active {
+    color: #d05270;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid #d05270;
+    padding-bottom: 0.4rem;
+}
+
+/* CATEGORIES END */
+
+/* POST LIST START */
+.post_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.post_list .post_card {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 3rem 0;
+    justify-content: space-around;
+}
+
+.post_list .post_card .post_img {
+    height: 400px;
+    width: max-content;
+}
+
+.post_list .post_card .post_date {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.post_list .post_card .post_title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d05270;
+    margin: 0.5rem 0;
+}
+
+.post_list .post_card .post_text {
+    font-weight: 415;
+    margin: 0.5rem 0;
+}
+
+.post_list .post_card .post_link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #d05270;
+    text-decoration: none;
+    border-bottom: #d05270 1px solid;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    margin-top: 2rem;
+}
+
+/* POST LIST END */
+
+/* FOOTER START */
+
+.footer {
+    position: relative;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+/* FOOTER END */
+
+/* RESPONSIVE START */
+
+@media only screen and (max-width: 844px) {
+    body {
+        width: 90%;
+        margin: auto;
+    }
+
+    .navbar_links_container {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        left: 0%;
+        top: 9%;
+        width: 100%;
+        height: 0%;
+        background-color: white;
+        transition: height 250ms ease-in-out;
+        z-index: -1;
+    }
+
+    .navbar_links_container.active {
+        height: 100%;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .navbar_menu_links {
+        flex-direction: column;
+    }
+
+    .navbar_menu_links li {
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+
+    .menu_collapse {
+        display: block;
+    }
+
+    .navbar_first_logo {
+        display: none;
+    }
+
+    .navbar_second_logo {
+        width: 71px;
+    }
+
+    .navbar_mobile_logo {
+        display: block;
+        margin-right: 1rem;
+    }
+
+    .showcase {
+        display: flex;
+        margin: 5rem 0;
+    }
+
+    .showcase_info {
+        padding: 0;
+    }
+
+    .showcase_img {
+        display: none;
+    }
+
+    .showcase_info h1,
+    h3 {
+        font-size: 20px;
+        margin: 0;
+        color: #d05270;
+        font-weight: 500;
+    }
+
+    .showcase_info h3 {
+        color: #424242;
+        font-weight: 500;
+    }
+
+    .showcase_info p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .showcase_links {
+        flex-direction: row;
+    }
+
+    .showcase_links .showcase_link {
+        font-size: 12px;
+        font-weight: 500;
+        height: 40px;
+    }
+
+    .showcase_links .showcase_link img {
+        margin-right: 0.5rem;
+    }
+
+    .blog_categories {
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    .blog_categories .item {
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 1rem;
+        white-space: nowrap;
+    }
+
+    .blog_categories .item.active {
+        font-size: 14px;
+
+    }
+
+    .post_list .post_card {
+        margin: 1rem 0;
+    }
+
+    .post_list .post_card .post_img {
+        height: 200px;
+        width: max-content;
+    }
+
+    .post_list .post_card .post_date {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .post_list .post_card .post_title {
+        font-size: 20px;
+    }
+
+    .post_list .post_card .post_text {
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0.5rem 0;
+    }
+
+    .post_list .post_card .post_link {
+        font-size: 14px;
+    }
+
+}
+
+/* RESPOSIVE END */
